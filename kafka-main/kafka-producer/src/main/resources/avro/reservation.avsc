@@ -1,0 +1,90 @@
+{
+    "type": "record",
+    "name": "OrdreReservationAvro",
+    "namespace": "com.smile.formation.kafka.schema",
+    "fields": [
+        {
+            "name": "typeOperation",
+            "type": "string"
+        },
+        {
+            "name": "idClient",
+            "type": "long"
+        },
+        {
+            "name": "noCommande",
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        {
+            "name": "reservation",
+            "type": [
+                "null",
+                {
+                    "type": "record",
+                    "name": "ReservationAvro",
+                    "fields": [
+                        {
+                            "name": "noCommande",
+                            "type": "string"
+                        },
+                        {
+                            "name": "statut",
+                            "type": "string"
+                        },
+                        {
+                            "name": "dateDebutValidite",
+                            "type": "long",
+                            "logicalType": "date"
+                        },
+                        {
+                            "name": "dateFinValidite",
+                            "type": "long",
+                            "logicalType": "date"
+                        },
+                        {
+                            "name": "dateDebutPayee",
+                            "type": [
+                                "null",
+                                "long"
+                            ],
+                            "logicalType":"date",
+                            "default": null
+                        },
+                        {
+                            "name": "dateFinPayee",
+                            "type": [
+                                "null",
+                                "long"
+                            ],
+                            "logicalType":"date",
+                            "default": null
+                        },
+                        {
+                            "name": "codePoche",
+                            "type": "string"
+                        },
+                        {
+                            "name": "idClient",
+                            "type": "long"
+                        },
+                        {
+                            "name": "dateCreation",
+                            "type": "long",
+                            "default" : 0,
+                            "logicalType": "date"
+                        },
+                        {
+                            "name": "dateModification",
+                            "type": "long",
+                            "default" : 0,
+                            "logicalType": "date"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

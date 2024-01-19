@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  producer:
+    container_name: producer 
+    image: localhost:5000/formation/kafka/producer:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    networks:
+      - kafka
+networks:
+  kafka:
+    external: true
+

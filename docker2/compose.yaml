@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  front:
+    container_name: formation-docker-front
+    image: nexus-registry.lavaleriane.fr/formation/docker/front-marc:latest
+    ports:
+      - "8181:80"
+      - "443:443"
+    links:
+      - back
+
+  back:
+    container_name: formation-docker-back
+    image: nexus-registry.lavaleriane.fr/formation/docker/back-marc:latest
+    ports:
+      - "8080:8080"
+

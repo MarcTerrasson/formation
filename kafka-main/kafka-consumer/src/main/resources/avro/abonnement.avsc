@@ -1,0 +1,103 @@
+{
+    "type": "record",
+    "name": "OrdreAbonnementAvro",
+    "namespace": "com.smile.formation.kafka.schema",
+    "fields": [
+        {
+            "name": "typeOperation",
+            "type": "string"
+        },
+        {
+            "name": "idClient",
+            "type": "long"
+        },
+        {
+            "name": "idAbo",
+            "type": [
+                "string",
+                "null"
+            ],
+            "default": "null"
+        },
+        {
+            "name": "abonnement",
+            "type": [
+                "null",
+                {
+                    "type": "record",
+                    "name": "AbonnementAvro",
+                    "fields": [
+                        {
+                            "name": "noCommande",
+                            "type": "string"
+                        },
+                        {
+                            "name": "idAboCrm",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "default": "null"
+                        },
+                        {
+                            "name": "statut",
+                            "type": "string"
+                        },
+                        {
+                            "name": "nbPlace",
+                            "type": "int"
+                        },
+                        {
+                            "name": "codeProduit",
+                            "type": [
+                                "string",
+                                "null"
+                            ]
+                        },
+                        {
+                            "name": "dateDebutValidite",
+                            "type": "long",
+                            "logicalType": "date"
+                        },
+                        {
+                            "name": "dateFinValidite",
+                            "type": [
+                                "null",
+                                "long"
+                            ],
+                            "logicalType": "date"
+                        },
+                        {
+                            "name": "codePoche",
+                            "type": "string"
+                        },
+                        {
+                            "name": "idClient",
+                            "type": "long"
+                        },
+                        {
+                            "name": "entiteComptable",
+                            "type": [
+                                "null",
+                                "string"
+                            ],
+                            "default": null
+                        },
+			            {
+			              "name": "dateCreation",
+			              "type": "long",
+			              "default": 0,
+			              "logicalType": "date"
+			            },
+                        {
+                            "name": "dateModification",
+                            "type": "long",
+                            "default" : 0,
+                            "logicalType": "date"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

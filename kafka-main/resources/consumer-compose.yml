@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  consumer:
+    container_name: consumer
+    image: localhost:5000/formation/kafka/consumer:0.0.1-SNAPSHOT
+    networks:
+      - kafka
+networks:
+  kafka:
+    external: true
+

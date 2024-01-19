@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  my_alpine:
+    image: alpine:latest
+    container_name: monsupercontainer
+    ports:
+     - 80:80
+     - 443:443
+    volumes:
+     - /mon/chemin/host/:/mon/directory/container/
+    networks:
+     - monsupernetwork
+
+  bdd:
+   depends_on: my_alpine
+   ...
+
+volumes:
+...
+
+networks:
+  monsuperwork:
+    external: true
+
