@@ -17,6 +17,8 @@
 | Exemples de technologies | VMWare, Workstation | Docker, Podman |
 |  |  |  |
 
+	
+
 ### Kubernetes
 
 #### Elements de base
@@ -168,9 +170,6 @@ Hors connexion VPN pour aller plus vite:
 | Access Control | Sécurité | Utilisation Ultra-avancée++ : TPPC ! (Touche Pas P'tit Con) |
 | Custom Resources | Let me sing the song of my people | Ce ne sont pas les onglets que vous cherchez ! |
 
-### Onglets à usage exceptionnels
-
-
 ## Un peu de pratique
 
 ==Afin de limiter les potentiels bêtises sur la préprod, tous les exercices suivant se feront sur le cluster minikube.==
@@ -181,6 +180,14 @@ Hors connexion VPN pour aller plus vite:
 #### N'afficher que les ressources du namespace local
 
 * Sélectionner le(s) namespace(s) désiré(s) en haut à droite
+
+### Analyse et Debug
+
+#### Consulter les événements du cluster
+
+* Dans Events, consultez les événements par namespace
+* Modifiez un deployment pour mettre un nom ou un tag d'image inexistant
+* Consultez les événements pour voir ce qu'il se passe
 
 #### Aller lire les logs d'un pod 
 
@@ -239,14 +246,9 @@ Hors connexion VPN pour aller plus vite:
 * Sélectionnez un template (ex : ConfigMap) et éditez la comme vous le souhaitez puis sauvegardez
 * Allez dans l'onglet de votre ressource et constatez la création de l'entité
 
-### Analyse et Debug
 
-#### Consulter les événements du cluster
+#### Créer un job pi
 
-* Dans Events, consultez les événements par namespace
-* Modifiez un deployment pour mettre un nom ou un tag d'image inexistant
-* Consultez les événements pour voir ce qu'il se passe
-
-Créer un job pi
+https://kubernetes.io/docs/concepts/workloads/controllers/job/
 
 
