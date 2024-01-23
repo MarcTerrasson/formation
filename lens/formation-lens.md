@@ -163,17 +163,16 @@ Hors connexion VPN pour aller plus vite:
 | Workloads | Accès et actions sur les éléments principaux du cluster | Utilisation principale : Qu'est ce qui ne marche pas ? |
 | Config | Accès et actions sur les config au sens large | Diagnostique des configurations : Pourquoi mon appli n'arrive pas à accéder à une ressource (API, Database, ...) ? |
 | Network | Accès et actions sur les éléments réseaux (ingress, services, ...) | Diagnostique réseaux : Pourquoi ma requête n'atteint pas mon serveur ? |
-| Storage |  | Pourquoi je ne retrouve pas mes données ? |
-| Namespaces | Listing des namespaces | visite : Comment est organisé mon cluster ? |
+| Storage |  | Diagnostique disques : Pourquoi je ne retrouve pas mes données ? |
+| Namespaces | Listing des namespaces | Visite : Comment est organisé mon cluster ? |
 | Events | Listing des événements | Diagnostique avancé : Que se passe-t-il sur mon cluster ? |
 | Helm | Market place | Shopping : Qu'est ce que je vais installer aujourd'hui ? |
-| Access Control | Sécurité | Utilisation Ultra-avancée++ : TPPC ! (Touche Pas P'tit Con) |
-| Custom Resources | Let me sing the song of my people | Ce ne sont pas les onglets que vous cherchez ! |
+| Access Control | Sécurité | Utilisation Ultra-avancée++ : TPPC ! (Touche Pas P'tit Con). Gestion des permissions au niveau du cluster. |
+| Custom Resources | Let me sing the song of my people | I'm gonna make my own Kubernetes with blackjack and hookers ! |
 
 ## Un peu de pratique
 
 ==Afin de limiter les potentiels bêtises sur la préprod, tous les exercices suivant se feront sur le cluster minikube.==
-
 
 ### Navigation dans le cluster Minikube
 
